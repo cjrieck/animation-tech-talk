@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 import UIKit
 import PlaygroundSupport
 
@@ -22,5 +21,4 @@ for i in 0..<containerView.subviews.count {
     },
                    completion: nil)
 }
-
 //: [Next](@next)

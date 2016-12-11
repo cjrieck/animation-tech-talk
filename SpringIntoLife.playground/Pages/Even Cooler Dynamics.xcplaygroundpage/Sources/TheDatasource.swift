@@ -13,7 +13,7 @@ public class TheDatasource: NSObject, UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 1000
     }
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -22,7 +22,7 @@ public class TheDatasource: NSObject, UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier, for: indexPath)
-        cell.contentView.backgroundColor = UIColor.orange
+        cell.contentView.backgroundColor = UIColor.red
         return cell
     }
 }

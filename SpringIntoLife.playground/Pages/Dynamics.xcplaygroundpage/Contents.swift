@@ -5,7 +5,6 @@ import PlaygroundSupport
 
 let containerView = UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 300, height: 500)))
 containerView.backgroundColor = UIColor.white
-PlaygroundPage.current.liveView = containerView
 
 let boxSize = 100
 let box = UIView(frame: CGRect(x: Int(containerView.center.x - CGFloat(boxSize / 2)), y: 0, width: boxSize, height: boxSize))
@@ -35,5 +34,7 @@ collision.addBoundary(withIdentifier: "barrier" as NSCopying, from: barrier.fram
 let dynamicBehavior = UIDynamicItemBehavior(items: [box])
 dynamicBehavior.elasticity = 0.5
 animator.addBehavior(dynamicBehavior)
+
+PlaygroundPage.current.liveView = containerView
 
 //: [Next](@next)

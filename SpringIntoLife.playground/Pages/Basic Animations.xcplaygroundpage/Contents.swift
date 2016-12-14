@@ -5,8 +5,6 @@ import PlaygroundSupport
 
 let containerView = CirclesView(frame: CGRect(x: 0, y: 0, width: 400, height: 150))
 
-PlaygroundPage.current.liveView = containerView
-
 let allTogetherNow = true
 let duration = 4
 for i in 0..<containerView.subviews.count {
@@ -20,5 +18,7 @@ for i in 0..<containerView.subviews.count {
                     },
                    completion: nil)
 }
+
+PlaygroundPage.current.liveView = containerView
 
 //: [Next](@next)

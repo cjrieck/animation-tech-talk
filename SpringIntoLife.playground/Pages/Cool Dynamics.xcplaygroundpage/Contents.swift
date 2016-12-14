@@ -9,6 +9,7 @@ containerView.backgroundColor = UIColor.white
 PlaygroundPage.current.liveView = containerView
 PlaygroundPage.current.needsIndefiniteExecution = true
 
-containerView.addSubview(InteractiveView(frame: containerView.frame))
+let interactiveView = InteractiveView(frame: containerView.frame)
+containerView.addSubview(interactiveView)
 
 //: [Next](@next)

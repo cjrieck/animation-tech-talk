@@ -18,7 +18,7 @@ for i in 0..<containerView.subviews.count {
     viewPropertyAnimator.startAnimation(afterDelay: allTogetherNow ? 0 : TimeInterval(i * duration))
 }
 
-PlaygroundPage.current.liveView = containerView
 PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = containerView
 
 //: [Next](@next)

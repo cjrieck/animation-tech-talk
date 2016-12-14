@@ -19,7 +19,7 @@ for i in 0..<containerView.subviews.count {
                    completion: nil)
 }
 
-PlaygroundPage.current.liveView = containerView
 PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = containerView
 
 //: [Next](@next)

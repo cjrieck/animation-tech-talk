@@ -15,4 +15,5 @@ containerView.addSubview(collectionView)
 
 collectionView.reloadData()
 
+PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = containerView

@@ -35,6 +35,7 @@ let dynamicBehavior = UIDynamicItemBehavior(items: [box])
 dynamicBehavior.elasticity = 0.5
 animator.addBehavior(dynamicBehavior)
 
+PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = containerView
 
 //: [Next](@next)

@@ -17,5 +17,6 @@ positionAnimator.startAnimation()
 positionAnimator.addAnimations({ box.alpha = 0 }, delayFactor: 0.5)
 
 PlaygroundPage.current.liveView = containerView
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: [Next](@next)

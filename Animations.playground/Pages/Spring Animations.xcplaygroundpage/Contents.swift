@@ -21,5 +21,6 @@ for i in 0..<containerView.subviews.count {
 }
 
 PlaygroundPage.current.liveView = containerView
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: [Next](@next)

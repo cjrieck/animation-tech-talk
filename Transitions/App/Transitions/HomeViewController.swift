@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
         setupCollectionView()
     }
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10.0
         layout.minimumInteritemSpacing = 10.0
@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
             make.edges.equalTo(self.view).inset(10.0)
         }
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate {
@@ -43,6 +42,8 @@ extension HomeViewController: UICollectionViewDelegate {
             navDelegate = NavigationControllerDelegate(animator: ZoomAnimator(sourceFrame: collectionViewCellFrame))
         case 1:
             navDelegate = NavigationControllerDelegate(animator: ScaleAnimator())
+        case 2:
+            navDelegate = NavigationControllerDelegate(animator: CircleMaskAnimator())
         default:
             navDelegate = nil
         }

@@ -17,6 +17,9 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         case is ScaleAnimator:
             (self.animator as? ScaleAnimator)?.presenting = operation == .push
             return animator
+        case is CircleMaskAnimator:
+            (self.animator as? CircleMaskAnimator)?.presenting = operation == .push
+            return animator
         default:
             return nil
         }

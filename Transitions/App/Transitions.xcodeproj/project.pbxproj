@@ -16,6 +16,8 @@
 		0CBA9C031E04231100C8A493 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA9C021E04231100C8A493 /* NavigationControllerDelegate.swift */; };
 		0CBA9C051E0423E700C8A493 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA9C041E0423E700C8A493 /* ZoomAnimator.swift */; };
 		0CFF33C01E04A1B6003D1CD6 /* ScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF33BF1E04A1B6003D1CD6 /* ScaleAnimator.swift */; };
+		0CFF33C21E04AA3D003D1CD6 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF33C11E04AA3D003D1CD6 /* DestinationViewController.swift */; };
+		0CFF33C41E06E7BD003D1CD6 /* CircleMaskAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF33C31E06E7BD003D1CD6 /* CircleMaskAnimator.swift */; };
 		78D0BE0BEE0D2505504961DE /* Pods_TransitionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAD99D1C385B84675FBAA09 /* Pods_TransitionsTests.framework */; };
 		A023588C43A70BA69C8C2831 /* Pods_TransitionsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BBA2F1C2FF91758F93B595 /* Pods_TransitionsUITests.framework */; };
 		E9773A118D7DFBC28BE541A6 /* Pods_Transitions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96C05CBC488405F4785921E /* Pods_Transitions.framework */; };
@@ -56,6 +58,8 @@
 		0CBA9C021E04231100C8A493 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		0CBA9C041E0423E700C8A493 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		0CFF33BF1E04A1B6003D1CD6 /* ScaleAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimator.swift; sourceTree = "<group>"; };
+		0CFF33C11E04AA3D003D1CD6 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
+		0CFF33C31E06E7BD003D1CD6 /* CircleMaskAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMaskAnimator.swift; sourceTree = "<group>"; };
 		3EFCBBD33557E450B5556C5E /* Pods-TransitionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitionsTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TransitionsTests/Pods-TransitionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72BBA2F1C2FF91758F93B595 /* Pods_TransitionsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitionsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AAD99D1C385B84675FBAA09 /* Pods_TransitionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,7 @@
 				0C17A4B51E020A5500D6FF47 /* LaunchScreen.storyboard */,
 				0C17A4B81E020A5500D6FF47 /* Info.plist */,
 				0CBA9C021E04231100C8A493 /* NavigationControllerDelegate.swift */,
+				0CFF33C11E04AA3D003D1CD6 /* DestinationViewController.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			children = (
 				0CBA9C041E0423E700C8A493 /* ZoomAnimator.swift */,
 				0CFF33BF1E04A1B6003D1CD6 /* ScaleAnimator.swift */,
+				0CFF33C31E06E7BD003D1CD6 /* CircleMaskAnimator.swift */,
 			);
 			name = Animators;
 			sourceTree = "<group>";
@@ -459,6 +465,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C17A4AF1E020A5500D6FF47 /* HomeViewController.swift in Sources */,
+				0CFF33C21E04AA3D003D1CD6 /* DestinationViewController.swift in Sources */,
+				0CFF33C41E06E7BD003D1CD6 /* CircleMaskAnimator.swift in Sources */,
 				0CBA9C051E0423E700C8A493 /* ZoomAnimator.swift in Sources */,
 				0CBA9C031E04231100C8A493 /* NavigationControllerDelegate.swift in Sources */,
 				0C17A4AD1E020A5500D6FF47 /* AppDelegate.swift in Sources */,

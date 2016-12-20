@@ -42,7 +42,7 @@ class CircleMaskAnimator: NSObject, UIViewControllerAnimatedTransitioning, CAAni
         circleMaskAnimation.repeatCount = 1
         circleMaskAnimation.isRemovedOnCompletion = false
         circleMaskAnimation.delegate = self
-        circleMaskAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.34, 0.01, 0.69, 1.37)
+        circleMaskAnimation.timingFunction =  CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut) //CAMediaTimingFunction(controlPoints: 0.34, 0.01, 0.69, 1.37)
         circleMaskAnimation.fillMode = kCAFillModeForwards
         
         circleMaskAnimation.fromValue = presenting ? CircleDefaultMinScale : CircleDefaultMaxScale

@@ -42,8 +42,8 @@ class ZoomAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(
             withDuration: duration,
             delay: 0,
-            usingSpringWithDamping: 0.7,
-            initialSpringVelocity: 0.8,
+            usingSpringWithDamping: presenting ? 0.8 : 1.0,
+            initialSpringVelocity: 1.0,
             options: .curveEaseOut,
             animations: {
                 destination.transform = self.presenting ? CGAffineTransform.identity : scaleTransform

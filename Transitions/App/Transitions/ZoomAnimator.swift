@@ -1,6 +1,6 @@
 import UIKit
 
-class ZoomAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class ZoomAnimator: NSObject, UIViewControllerAnimatedTransitioning, TransitionAnimating {
     
     fileprivate let duration = 0.5
     

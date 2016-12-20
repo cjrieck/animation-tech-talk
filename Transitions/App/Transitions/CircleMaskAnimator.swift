@@ -4,7 +4,7 @@ private let CircleMaskAnimationKey = "circleMaskAnimation"
 private let CircleDefaultMaxScale = 2.5
 private let CircleDefaultMinScale = 0.0
 
-class CircleMaskAnimator: NSObject, UIViewControllerAnimatedTransitioning, CAAnimationDelegate {
+class CircleMaskAnimator: NSObject, UIViewControllerAnimatedTransitioning, CAAnimationDelegate, TransitionAnimating {
     
     var presenting: Bool = true
     

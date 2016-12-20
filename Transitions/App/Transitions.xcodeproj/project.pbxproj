@@ -13,6 +13,7 @@
 		0C17A4B71E020A5500D6FF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C17A4B51E020A5500D6FF47 /* LaunchScreen.storyboard */; };
 		0C17A4C21E020A5500D6FF47 /* TransitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17A4C11E020A5500D6FF47 /* TransitionsTests.swift */; };
 		0C17A4CD1E020A5500D6FF47 /* TransitionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17A4CC1E020A5500D6FF47 /* TransitionsUITests.swift */; };
+		0C6F9EB61E09CC21000A5E01 /* TransitionAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F9EB51E09CC21000A5E01 /* TransitionAnimating.swift */; };
 		0CBA9C031E04231100C8A493 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA9C021E04231100C8A493 /* NavigationControllerDelegate.swift */; };
 		0CBA9C051E0423E700C8A493 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA9C041E0423E700C8A493 /* ZoomAnimator.swift */; };
 		0CFF33C01E04A1B6003D1CD6 /* ScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF33BF1E04A1B6003D1CD6 /* ScaleAnimator.swift */; };
@@ -55,6 +56,7 @@
 		0C17A4C81E020A5500D6FF47 /* TransitionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C17A4CC1E020A5500D6FF47 /* TransitionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsUITests.swift; sourceTree = "<group>"; };
 		0C17A4CE1E020A5500D6FF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C6F9EB51E09CC21000A5E01 /* TransitionAnimating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimating.swift; sourceTree = "<group>"; };
 		0CBA9C021E04231100C8A493 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		0CBA9C041E0423E700C8A493 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		0CFF33BF1E04A1B6003D1CD6 /* ScaleAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimator.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				0CBA9C041E0423E700C8A493 /* ZoomAnimator.swift */,
 				0CFF33BF1E04A1B6003D1CD6 /* ScaleAnimator.swift */,
 				0CFF33C31E06E7BD003D1CD6 /* CircleMaskAnimator.swift */,
+				0C6F9EB51E09CC21000A5E01 /* TransitionAnimating.swift */,
 			);
 			name = Animators;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				0CBA9C031E04231100C8A493 /* NavigationControllerDelegate.swift in Sources */,
 				0C17A4AD1E020A5500D6FF47 /* AppDelegate.swift in Sources */,
 				0CFF33C01E04A1B6003D1CD6 /* ScaleAnimator.swift in Sources */,
+				0C6F9EB61E09CC21000A5E01 /* TransitionAnimating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

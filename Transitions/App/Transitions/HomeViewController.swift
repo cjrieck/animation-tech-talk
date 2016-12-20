@@ -5,6 +5,15 @@ private let CellReuseIdentifier = "cell"
 
 class HomeViewController: UIViewController {
     
+    fileprivate struct Constants {
+        static let ZoomTitle = "ZOOOOOOMMMMM"
+        static let ZoomDescription = "This was the amazing zoom animation (just like the superhero)"
+        static let ScaleTitle = "Swoosh!"
+        static let ScaleDescription = "And here you witnessed a scaling problem being solved"
+        static let MaskTitle = "WOWZA! AMAZE!"
+        static let MaskDescription = "Ever wonder what was behind curtain number 3? Now you know!"
+    }
+    
     fileprivate var currentNavControllerDelegate: UINavigationControllerDelegate?
     
     override func loadView() {
@@ -39,19 +48,31 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)!
         let navDelegate: UINavigationControllerDelegate?
-        let destinationVC = DestinationViewController()
-        destinationVC.view.backgroundColor = cell.backgroundColor
+        let title: String?
+        let animationDescription: String?
         switch indexPath.item {
         case 0:
             let collectionViewCellFrame = cell.superview!.convert(cell.frame, to: nil)
             navDelegate = NavigationControllerDelegate(animator: ZoomAnimator(sourceFrame: collectionViewCellFrame))
+            title = Constants.ZoomTitle
+            animationDescription = Constants.ZoomDescription
         case 1:
             navDelegate = NavigationControllerDelegate(animator: ScaleAnimator())
+            title = Constants.ScaleTitle
+            animationDescription = Constants.ScaleDescription
         case 2:
             navDelegate = NavigationControllerDelegate(animator: CircleMaskAnimator())
+            title = Constants.MaskTitle
+            animationDescription = Constants.MaskDescription
         default:
+            title = nil
+            animationDescription = nil
             navDelegate = nil
         }
+        
+        let destinationVC = DestinationViewController(animationDescription: animationDescription)
+        destinationVC.title = title
+        destinationVC.view.backgroundColor = cell.backgroundColor
         
         currentNavControllerDelegate = navDelegate
         navigationController?.delegate = navDelegate

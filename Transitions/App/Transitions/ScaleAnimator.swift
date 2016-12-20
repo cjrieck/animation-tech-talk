@@ -1,9 +1,9 @@
 import UIKit
 
-class ScaleAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class ScaleAnimator: NSObject, UIViewControllerAnimatedTransitioning, TransitionAnimating {
     
     private let duration = 0.3
-    private let destinationAlhpa: CGFloat = 0.7
+    private let destinationAlhpa: CGFloat = 0.3
     private let destinationScaleFactor: CGFloat = 0.9
     
     var presenting: Bool = true
@@ -27,16 +27,29 @@ class ScaleAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         destination.transform = presenting ? CGAffineTransform(translationX: destination.frame.size.width, y: 0.0) : .identity
         
-        UIView.animate(withDuration: duration,
-                       delay: 0.0,
-                       options: .curveEaseOut,
-                       animations: {
-                            source.alpha = self.presenting ? self.destinationAlhpa : 1.0
-                            source.transform = self.presenting ? CGAffineTransform(scaleX: self.destinationScaleFactor, y: self.destinationScaleFactor) : .identity
-                            destination.transform = self.presenting ? .identity : CGAffineTransform(translationX: destination.frame.size.width, y: 0.0)
-                        }) { finished in
-                            transitionContext.completeTransition(finished)
+        let propertyAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeOut, animations: {
+            source.alpha = self.presenting ? self.destinationAlhpa : 1.0
+            source.transform = self.presenting ? CGAffineTransform(scaleX: self.destinationScaleFactor, y: self.destinationScaleFactor) : .identity
+            destination.transform = self.presenting ? .identity : CGAffineTransform(translationX: destination.frame.size.width, y: 0.0)
+        })
+        propertyAnimator.addCompletion { animatingPosition in
+            if animatingPosition == .end {
+                transitionContext.completeTransition(true)
+            }
         }
+        propertyAnimator.startAnimation()
+        
+//        ------------ For comparison purposes ------------
+//        UIView.animate(withDuration: duration,
+//                       delay: 0.0,
+//                       options: .curveEaseOut,
+//                       animations: {
+//                            source.alpha = self.presenting ? self.destinationAlhpa : 1.0
+//                            source.transform = self.presenting ? CGAffineTransform(scaleX: self.destinationScaleFactor, y: self.destinationScaleFactor) : .identity
+//                            destination.transform = self.presenting ? .identity : CGAffineTransform(translationX: destination.frame.size.width, y: 0.0)
+//                        }) { finished in
+//                            transitionContext.completeTransition(finished)
+//        }
     }
     
 }

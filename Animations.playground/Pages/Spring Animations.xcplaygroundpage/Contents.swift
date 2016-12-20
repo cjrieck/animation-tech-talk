@@ -12,7 +12,7 @@ for i in 0..<containerView.subviews.count {
     UIView.animate(withDuration: TimeInterval(duration),
                    delay: allTogetherNow ? 0 : TimeInterval(i * duration),
                    usingSpringWithDamping: damping,
-                   initialSpringVelocity: 2,
+                   initialSpringVelocity: 0,
                    options: .curveLinear,
                    animations: {
                     view.transform = CGAffineTransform.identity

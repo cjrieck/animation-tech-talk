@@ -13,6 +13,11 @@ class HomeViewController: UIViewController {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10.0
@@ -34,7 +39,7 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)!
         let navDelegate: UINavigationControllerDelegate?
-        let destinationVC = UIViewController()
+        let destinationVC = DestinationViewController()
         destinationVC.view.backgroundColor = cell.backgroundColor
         switch indexPath.item {
         case 0:

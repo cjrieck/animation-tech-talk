@@ -15,8 +15,8 @@ for i in 0..<containerView.subviews.count {
                    initialSpringVelocity: 0,
                    options: .curveLinear,
                    animations: {
-                    view.transform = CGAffineTransform.identity
-    },
+                       view.transform = CGAffineTransform.identity
+                   },
                    completion: nil)
 }
 

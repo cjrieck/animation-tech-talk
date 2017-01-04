@@ -26,13 +26,13 @@ containerView.addSubview(barrier)
 
 // Create invisible boundary to prevent the blue view from going down with the box
 
-let rightEdge = CGPoint(x: barrier.frame.origin.x + barrier.frame.size.width, y: barrier.frame.origin.y)
-collision.addBoundary(withIdentifier: "barrier" as NSCopying, from: barrier.frame.origin, to: rightEdge)
+let rightMostPoint = CGPoint(x: barrier.frame.origin.x + barrier.frame.size.width, y: barrier.frame.origin.y)
+collision.addBoundary(withIdentifier: "barrier" as NSCopying, from: barrier.frame.origin, to: rightMostPoint)
 
 // Make the box bouncy!
 
 let dynamicBehavior = UIDynamicItemBehavior(items: [box])
-dynamicBehavior.elasticity = 0.5
+dynamicBehavior.elasticity = 1
 animator.addBehavior(dynamicBehavior)
 
 PlaygroundPage.current.liveView = containerView

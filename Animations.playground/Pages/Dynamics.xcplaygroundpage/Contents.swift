@@ -32,7 +32,7 @@ collision.addBoundary(withIdentifier: "barrier" as NSCopying, from: barrier.fram
 // Make the box bouncy!
 
 let dynamicBehavior = UIDynamicItemBehavior(items: [box])
-dynamicBehavior.elasticity = 1
+dynamicBehavior.elasticity = 0.6
 animator.addBehavior(dynamicBehavior)
 
 PlaygroundPage.current.liveView = containerView

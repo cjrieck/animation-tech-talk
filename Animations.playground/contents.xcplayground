@@ -9,5 +9,6 @@
         <page name='Dynamics'/>
         <page name='Cool Dynamics'/>
         <page name='Even Cooler Dynamics'/>
+        <page name='Emitters'/>
     </pages>
 </playground>

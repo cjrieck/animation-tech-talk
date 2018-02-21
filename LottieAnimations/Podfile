@@ -1,0 +1,20 @@
+project 'App/LottieAnimations.xcodeproj'
+platform :ios, '10.0'
+
+target 'LottieAnimations' do
+  use_frameworks!
+
+  pod 'lottie-ios'
+  pod 'SnapKit'
+
+  target 'LottieAnimationsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LottieAnimationsUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

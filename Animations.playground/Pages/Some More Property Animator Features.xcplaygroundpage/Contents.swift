@@ -14,9 +14,7 @@ let positionAnimator = UIViewPropertyAnimator(duration: 5, curve: .linear, anima
 })
 
 positionAnimator.addAnimations({ box.alpha = 0 }, delayFactor: 0.5)
-positionAnimator.addAnimations( {
-    box.center = .zero
-}, delayFactor: 0.75)
+positionAnimator.addAnimations({ box.center = .zero }, delayFactor: 0.75)
 positionAnimator.startAnimation()
 
 PlaygroundPage.current.liveView = containerView

@@ -26,8 +26,11 @@ containerView.addSubview(barrier)
 
 // Create invisible boundary to prevent the blue view from going down with the box
 
-let rightMostPoint = CGPoint(x: barrier.frame.origin.x + barrier.frame.size.width, y: barrier.frame.origin.y)
-collision.addBoundary(withIdentifier: "barrier" as NSCopying, from: barrier.frame.origin, to: rightMostPoint)
+let rightTopMostPoint = CGPoint(x: barrier.frame.origin.x + barrier.frame.size.width, y: barrier.frame.origin.y)
+collision.addBoundary(withIdentifier: "topBarrier" as NSCopying, from: barrier.frame.origin, to: rightTopMostPoint)
+
+let rightBottomMostPoint = CGPoint(x: rightTopMostPoint.x, y: rightTopMostPoint.y + barrier.frame.size.height)
+collision.addBoundary(withIdentifier: "bottomBarrier" as NSCopying, from: barrier.frame.origin, to: rightBottomMostPoint)
 
 // Make the box bouncy!
 

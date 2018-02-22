@@ -9,7 +9,6 @@ let allTogetherNow = true
 let duration = 6
 for i in 0..<containerView.subviews.count {
     let view = containerView.subviews[i]
-    let damping = 1.0 - (0.25 * CGFloat(i + 1))
     UIView.animate(withDuration: TimeInterval(duration),
                    delay: allTogetherNow ? 0 : TimeInterval(i * duration),
                    options: animationOption(option: i),

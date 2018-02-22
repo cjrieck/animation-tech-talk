@@ -13,7 +13,7 @@ emitterLayer.emitterPosition = containerView.center
 emitterLayer.emitterShape = kCAEmitterLayerCircle
 
 let emitterCell = CAEmitterCell()
-emitterCell.birthRate = 100
+emitterCell.birthRate = 1000
 emitterCell.lifetime = 10
 emitterCell.velocity = 250
 emitterCell.scale = 0.05
